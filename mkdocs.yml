@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: IAW - Restituto
+
+nav:
+    - Principal: index.md
+    - Practica1: Practica1.md
+    - Practica-Docker-Https: docker-https.md
+    - Acerca de: about.md
+
+theme: material
