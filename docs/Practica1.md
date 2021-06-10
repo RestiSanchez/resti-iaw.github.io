@@ -7,7 +7,7 @@
   - MySQL/MariaDB
   - PHP
 
-![portada](/site/assets/images/portada.jpg)
+![portada](/resti-iaw.github.io/site/assets/images/portada.jpg)
 ## Linux 
 
 Los siguientes comandos básicos son los utilizados en la práctica , es recomendable e incluso obligatorio utilzar sudo:
