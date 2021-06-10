@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+# Bienvenido a MKdoc
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Restituto Sánchez Sánchez
 
-## Commands
+### Estructura actual:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+```
+docs
+    - Practica1.md
+    - about.md
+    - docker-https.md
+    - index.md
+site
+    - todo el contenido html y xml
+mkdocs.yml
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```
