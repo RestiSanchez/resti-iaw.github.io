@@ -1,0 +1,632 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+    
+    
+      
+        <title>Practica-Docker-Https - IAW - Restituto</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-https-con-lets-encrypt-y-certbot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IAW - Restituto" class="md-header__button md-logo" aria-label="IAW - Restituto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - Restituto
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica-Docker-Https
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW - Restituto" class="md-nav__button md-logo" aria-label="IAW - Restituto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IAW - Restituto
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Principal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        Practica1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Practica-Docker-Https
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Practica-Docker-Https
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-a-realizar" class="md-nav__link">
+    Pasos a realizar
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasos a realizar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1" class="md-nav__link">
+    Paso 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    Paso 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3" class="md-nav__link">
+    Paso 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4" class="md-nav__link">
+    Paso 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5" class="md-nav__link">
+    Paso 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6" class="md-nav__link">
+    Paso 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasos-para-no-redirigir" class="md-nav__link">
+    Pasos para no redirigir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-docker-compose" class="md-nav__link">
+    Código docker-compose
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-a-realizar" class="md-nav__link">
+    Pasos a realizar
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasos a realizar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1" class="md-nav__link">
+    Paso 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    Paso 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3" class="md-nav__link">
+    Paso 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4" class="md-nav__link">
+    Paso 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5" class="md-nav__link">
+    Paso 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6" class="md-nav__link">
+    Paso 6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasos-para-no-redirigir" class="md-nav__link">
+    Pasos para no redirigir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-docker-compose" class="md-nav__link">
+    Código docker-compose
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="practica-https-con-lets-encrypt-y-certbot">Práctica HTTPS con Let's Encrypt y Certbot</h1>
+<h2 id="pasos-a-realizar">Pasos a realizar</h2>
+<h3 id="paso-1">Paso 1</h3>
+<p><strong>Crear instancia EC2</strong> en AWS con los siguientes puertos:
+- SSH (22/TCP)
+- HTTP (80/TCP)
+- HTTPS (443/TCP)
+- </p>
+<h3 id="paso-2">Paso 2</h3>
+<p><strong>Obtener la dirección IP</strong> de la instancia EC2 en AWS.</p>
+<h3 id="paso-3">Paso 3</h3>
+<p><strong>Realizar la instalación y configuración de un sitio web</strong>. Utilizamos los scripts que tenemos de las prácticas anteriores.</p>
+<h3 id="paso-4">Paso 4</h3>
+<p><strong>Registrar un nombre de dominio</strong> en algún proveedor de dominio gratuito. En mi caso en NO-IP.</p>
+<p><img alt="IP CON DNS" src="/imgs/ip.png" /></p>
+<p><strong>Configuramos los registros DNS del proveedor de nombres de dominio</strong> para que el nombre del dominio que se ha registrado pueda resolver hacia la dirección pública de la instancia en AWS.</p>
+<p>Como tenemos en el ejemplo de arriba.</p>
+<h3 id="paso-5">Paso 5</h3>
+<p>Realizamos la instalación y la configuración de <strong>Docker y Docker-compose</strong> en la instancia de AWS.</p>
+<p>En el script creado para esta práctica podemos apreciar los siguientes pasos:</p>
+<pre><code>
+#!/bin/bash
+
+# Actualizamos lista de repositorios
+apt update 
+
+# Actualizamos los paquetes
+apt upgrade -y
+
+# Instalamos docker
+
+apt install docker -y
+
+# Instalamos docker-compose
+
+apt install docker-compose -y
+
+</code></pre>
+<h3 id="paso-6">Paso 6</h3>
+<p><strong>Modificar el archivo de <code>docker-compose.yml</code> de alguna de las prácticas anteriores para incluir el servicio de HTTPS-PORTAL</strong></p>
+<pre><code>version: '3.4'
+services:
+    https-portal:
+      image: steveltn/https-portal:1 
+      ports:
+        - 80:80 
+        - 443:443
+      restart: always
+      environment:
+        DOMAINS: 'resti-docker.ddns.net -&gt; http://prestashop:80'
+        STAGE: 'production'
+      networks:
+        - frontend-network
+</code></pre>
+<h3 id="pasos-para-no-redirigir">Pasos para no redirigir</h3>
+<ol>
+<li>Nos metemos a phpmyadmin</li>
+<li>Vamos a SQL e introducimos:</li>
+</ol>
+<pre><code>UPDATE ps_configuration SET value = '1' WHERE name = 'PS_SSL_ENABLED';
+UPDATE ps_configuration SET value = '1' WHERE name = 'PS_SSL_ENABLED_EVERYWHERE';
+</code></pre>
+<h2 id="codigo-docker-compose">Código docker-compose</h2>
+<pre><code>version: '3.4'
+services:
+    https-portal:
+      image: steveltn/https-portal:1 
+      ports:
+        - 80:80 
+        - 443:443
+      restart: always
+      environment:
+        DOMAINS: 'resti-docker.ddns.net -&gt; http://prestashop:80'
+        STAGE: 'production'
+      networks:
+        - frontend-network
+    phpmyadmin:
+        image: phpmyadmin
+        environment:
+            - PMA_ARBITRARY=1
+        ports:
+            - 8080:80
+        networks:
+            - frontend-network
+            - backend-network
+        depends_on: 
+            - mysql
+        restart: always
+    mysql:
+        image: mysql:5.7
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        volumes:
+            - mysql_data:/var/lib/mysql
+        networks:
+            - backend-network
+        restart: always
+    prestashop:
+        image: prestashop/prestashop
+        environment:
+            - DB_SERVER=${DB_SERVER}
+        volumes:
+            - prestashop_data:/var/www/html
+        networks:
+            - frontend-network
+            - backend-network
+        restart: always
+        depends_on: 
+            - mysql
+networks:
+    frontend-network:
+    backend-network:
+
+volumes:
+    mysql_data:
+    prestashop_data:
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Practica1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Practica1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Practica1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../about/" class="md-footer__link md-footer__link--next" aria-label="Next: Acerca de" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Acerca de
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>

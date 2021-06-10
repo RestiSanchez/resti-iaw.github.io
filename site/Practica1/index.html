@@ -1,0 +1,1024 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.7">
+    
+    
+      
+        <title>Practica1 - IAW - Restituto</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#asir2-iaw-practica01" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IAW - Restituto" class="md-header__button md-logo" aria-label="IAW - Restituto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW - Restituto
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW - Restituto" class="md-nav__button md-logo" aria-label="IAW - Restituto" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IAW - Restituto
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Principal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Practica1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Practica1
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#practica-01-iaw-pila-lamp" class="md-nav__link">
+    Practica 01 - IAW Pila L.A.M.P.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-update" class="md-nav__link">
+    apt update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-upgrade" class="md-nav__link">
+    apt upgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install" class="md-nav__link">
+    apt install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-remove" class="md-nav__link">
+    apt remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcional-instalacion-de-interfaz-grafica" class="md-nav__link">
+    (OPCIONAL) Instalación de interfaz gráfica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-del-servidor-ssh" class="md-nav__link">
+    Instalación del servidor SSH
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación del servidor SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-y-consultar-el-servicio-ssh" class="md-nav__link">
+    Como iniciar , parar y consultar el servicio SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-apache" class="md-nav__link">
+    Instalación Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-reiniciar-recargar-y-consultar-el-servicio-apache" class="md-nav__link">
+    Como iniciar , parar, reiniciar , recargar y consultar el servicio Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-de-apache" class="md-nav__link">
+    Archivos de configuración de Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-log-de-apache" class="md-nav__link">
+    Archivos de log de Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos de log de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accesslog" class="md-nav__link">
+    access.log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errorlog" class="md-nav__link">
+    error.log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mensajes-de-error-mas-detallados" class="md-nav__link">
+    Mensajes de error más detallados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mysql-server" class="md-nav__link">
+    MySQL Server
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-mysql-server" class="md-nav__link">
+    Instalación de MySQL Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de MySQL Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-y-consultar-el-estado-de-mysql" class="md-nav__link">
+    Como iniciar, parar y consultar el estado de MySQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-de-mysql-server" class="md-nav__link">
+    Archivos de configuración de MySQL Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-log-de-mysql-server" class="md-nav__link">
+    Archivos de log de MySQL Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-acceder-a-mysql-server-desde-consola-con-root" class="md-nav__link">
+    Como acceder a MySQL Server desde consola con root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-cambiar-la-contrasena-del-usuario-root" class="md-nav__link">
+    Como cambiar la contraseña del usuario root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutar-un-scriptsql-desde-consola" class="md-nav__link">
+    Ejecutar un script.sql desde consola
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuarios-y-permisos-en-mysql-server-desde-consola" class="md-nav__link">
+    Usuarios y permisos en MySQL Server desde consola
+  </a>
+  
+    <nav class="md-nav" aria-label="Usuarios y permisos en MySQL Server desde consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-permisos-que-podemos-aplicar" class="md-nav__link">
+    Tipos de permisos que podemos aplicar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-https/" class="md-nav__link">
+        Practica-Docker-Https
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#practica-01-iaw-pila-lamp" class="md-nav__link">
+    Practica 01 - IAW Pila L.A.M.P.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-update" class="md-nav__link">
+    apt update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-upgrade" class="md-nav__link">
+    apt upgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install" class="md-nav__link">
+    apt install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-remove" class="md-nav__link">
+    apt remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcional-instalacion-de-interfaz-grafica" class="md-nav__link">
+    (OPCIONAL) Instalación de interfaz gráfica
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-del-servidor-ssh" class="md-nav__link">
+    Instalación del servidor SSH
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación del servidor SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-y-consultar-el-servicio-ssh" class="md-nav__link">
+    Como iniciar , parar y consultar el servicio SSH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-apache" class="md-nav__link">
+    Instalación Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-reiniciar-recargar-y-consultar-el-servicio-apache" class="md-nav__link">
+    Como iniciar , parar, reiniciar , recargar y consultar el servicio Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-de-apache" class="md-nav__link">
+    Archivos de configuración de Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-log-de-apache" class="md-nav__link">
+    Archivos de log de Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos de log de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accesslog" class="md-nav__link">
+    access.log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errorlog" class="md-nav__link">
+    error.log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mensajes-de-error-mas-detallados" class="md-nav__link">
+    Mensajes de error más detallados
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mysql-server" class="md-nav__link">
+    MySQL Server
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-mysql-server" class="md-nav__link">
+    Instalación de MySQL Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de MySQL Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-iniciar-parar-y-consultar-el-estado-de-mysql" class="md-nav__link">
+    Como iniciar, parar y consultar el estado de MySQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-de-mysql-server" class="md-nav__link">
+    Archivos de configuración de MySQL Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-de-log-de-mysql-server" class="md-nav__link">
+    Archivos de log de MySQL Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-acceder-a-mysql-server-desde-consola-con-root" class="md-nav__link">
+    Como acceder a MySQL Server desde consola con root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-cambiar-la-contrasena-del-usuario-root" class="md-nav__link">
+    Como cambiar la contraseña del usuario root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutar-un-scriptsql-desde-consola" class="md-nav__link">
+    Ejecutar un script.sql desde consola
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuarios-y-permisos-en-mysql-server-desde-consola" class="md-nav__link">
+    Usuarios y permisos en MySQL Server desde consola
+  </a>
+  
+    <nav class="md-nav" aria-label="Usuarios y permisos en MySQL Server desde consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-permisos-que-podemos-aplicar" class="md-nav__link">
+    Tipos de permisos que podemos aplicar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="asir2-iaw-practica01">ASIR2-IAW-Practica01</h1>
+<h2 id="practica-01-iaw-pila-lamp">Practica 01 - IAW Pila L.A.M.P.</h2>
+<p><em>L.A.M.P.</em> Es el acrónimo utilizado para describir un sistema de infraestructura de Internet que usa las siguientes herramientas:
+  - Linux
+  - Apache
+  - MySQL/MariaDB
+  - PHP</p>
+<p><img alt="portada" src="/imgs/portada.jpg" /></p>
+<h2 id="linux">Linux</h2>
+<p>Los siguientes comandos básicos son los utilizados en la práctica , es recomendable e incluso obligatorio utilzar sudo:</p>
+<ul>
+<li>
+<h4 id="apt-update">apt update</h4>
+Actualiza la lista de paquetes</li>
+</ul>
+<p><code>sudo apt update</code></p>
+<ul>
+<li>
+<h4 id="apt-upgrade">apt upgrade</h4>
+Actualiza los paquetes instalados a sus ultimas versiones disponibles</li>
+</ul>
+<p><code>sudo apt upgrade</code></p>
+<ul>
+<li>
+<h4 id="apt-install">apt install</h4>
+Instala un paquete determinado</li>
+</ul>
+<p><code>sudo apt install</code></p>
+<ul>
+<li>
+<h4 id="apt-remove">apt remove</h4>
+Desinstala un paquete</li>
+</ul>
+<p><code>sudo apt remove</code></p>
+<h4 id="opcional-instalacion-de-interfaz-grafica">(OPCIONAL) Instalación de interfaz gráfica</h4>
+<p>Unity -&gt; <code>sudo apt install ubuntu-desktop</code></p>
+<p>GNOME -&gt; <code>sudo apt install ubuntu-gnome-desktop</code></p>
+<p>KDE -&gt; <code>sudo apt install kubuntu-desktop</code></p>
+<ul>
+<li>
+<h3 id="instalacion-del-servidor-ssh">Instalación del servidor SSH</h3>
+</li>
+</ul>
+<p><code>sudo apt install ssh</code></p>
+<h4 id="como-iniciar-parar-y-consultar-el-servicio-ssh">Como iniciar , parar y consultar el servicio SSH</h4>
+<p><code>sudo systemctl start/stop/status ssh</code></p>
+<h2 id="apache">Apache</h2>
+<ul>
+<li>
+<h4 id="instalacion-apache">Instalación Apache</h4>
+</li>
+</ul>
+<p><code>sudo apt install apache2</code></p>
+<h4 id="como-iniciar-parar-reiniciar-recargar-y-consultar-el-servicio-apache">Como iniciar , parar, reiniciar , recargar y consultar el servicio Apache</h4>
+<p><code>sudo systemctl start/stop/restart/reload/status apache2</code></p>
+<h4 id="archivos-de-configuracion-de-apache">Archivos de configuración de Apache</h4>
+<pre><code>/* Archivos */
+├── apache2.conf
+├── envvars
+├── magic
+└── ports.conf
+
+/* Directorios */
+├── conf-available
+├── conf-enabled
+├── mods-available
+├── mods-enabled
+├── sites-available
+└── sites-enabled
+</code></pre>
+<h3 id="archivos-de-log-de-apache">Archivos de log de Apache</h3>
+<h4 id="accesslog">access.log</h4>
+<p>El servidor almacena en el registro de accceso información sobre todas las peticiones que procesa</p>
+<h4 id="errorlog">error.log</h4>
+<p>El registro de errores del servidor</p>
+<h4 id="mensajes-de-error-mas-detallados">Mensajes de error más detallados</h4>
+<p>Necesitamos cambiar o añadir la linea LogLevel en el archivo de /etc/apache2/apache2.conf , los argumentos posibles son:</p>
+<p>emerg: Emergencias, no se puede utilizar el servidor.
+alert: Require acción inmediata.
+crit: Condiciones críticas.
+error: Condiciones de error.
+warn: Condiciones de advertencia. (Por defecto)
+notice: Condicón normal pero significativa.
+info: Informativa.
+debug: Mensajes de corrección de errores.</p>
+<h2 id="mysql-server">MySQL Server</h2>
+<ul>
+<li>
+<h3 id="instalacion-de-mysql-server">Instalación de MySQL Server</h3>
+</li>
+</ul>
+<pre><code>sudo apt install mysql-server
+</code></pre>
+<h4 id="como-iniciar-parar-y-consultar-el-estado-de-mysql">Como iniciar, parar y consultar el estado de MySQL</h4>
+<pre><code>sudo systemctl start/stop/restart/status mysql
+</code></pre>
+<h3 id="archivos-de-configuracion-de-mysql-server">Archivos de configuración de MySQL Server</h3>
+<p>El principal /etc/mysql/mysql.cnf</p>
+<p>Existen otros archivos de configuración:</p>
+<ul>
+<li>/etc/mysql/conf.d</li>
+<li>/etc/mysql/mysql.conf.d/</li>
+</ul>
+<h3 id="archivos-de-log-de-mysql-server">Archivos de log de MySQL Server</h3>
+<ul>
+<li>/var/log/mysql/error.log</li>
+</ul>
+<h3 id="como-acceder-a-mysql-server-desde-consola-con-root">Como acceder a MySQL Server desde consola con root</h3>
+<pre><code>sudo su 
+mysql -u root
+</code></pre>
+<h3 id="como-cambiar-la-contrasena-del-usuario-root">Como cambiar la contraseña del usuario root</h3>
+<p>Accedemos a la consola de MySQL como root y seleccionamos la base de datos mysql para ver los usuarios y el tipo de autenticación que tienen.</p>
+<p>Para cambiar la contraseña de root cambiamos el método de autenticación</p>
+<p><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'nueva_contraseña';</code></p>
+<p>A continuación ejecutamos el siguiente comando para actualizar la contraseña</p>
+<p><code>FLUSH PRIVILEGES;</code></p>
+<h3 id="ejecutar-un-scriptsql-desde-consola">Ejecutar un script.sql desde consola</h3>
+<p>Desde consola linux: </p>
+<pre><code>mysql -u -p &lt; script.sql
+</code></pre>
+<p>Desde la consola de MySQL:</p>
+<pre><code>mysql&gt; source script.sql 
+</code></pre>
+<h3 id="usuarios-y-permisos-en-mysql-server-desde-consola">Usuarios y permisos en MySQL Server desde consola</h3>
+<ul>
+<li>
+<h5 id="tipos-de-permisos-que-podemos-aplicar">Tipos de permisos que podemos aplicar</h5>
+```ALL PRIVILEGES: permite a un usuario de MySQL acceder a todas las bases de datos asignadas en el sistema.
+CREATE: permite crear nuevas tablas o bases de datos.
+DROP: permite eliminar tablas o bases de datos
+DELETE: permite eliminar registros de tablas.
+INSERT: permite insertar registros en tablas.
+SELECT: permite leer registros en las tablas.
+UPDATE: permite actualizar registros seleccionados en tablas.
+GRANT OPTION: permite asignar privilegios a otros usuarios.</li>
+</ul>
+<pre><code> #### Crear un nuevo usuario
+
+ ```
+ CREATE USER 'nombre_usuario'@'localhost' IDENTIFIED BY 'contraseña';
+ ```
+
+ #### Eliminar un usuario
+
+</code></pre>
+<p>DROP USER 'nombre_usuario'@'localhost';</p>
+<pre><code> #### Asignar permisos a un usuario
+
+ ```
+ GRANT [permiso] ON [nombre_base_de_datos].[nombre_tabla] TO 'nombre_usuario'@'localhost';
+ ```
+
+ Después de este comando habrá que ejecutar el siguiente comando para refrescar todos los privilegios
+
+ ```
+ FLUSH PRIVILEGES;
+ ```
+
+ #### Eliminar permisos a un usuario
+
+</code></pre>
+<p>REVOKE [permiso] ON [nombre_base_de_datos].[nombre_tabla] FROM 'nombre_usuario'@'localhost';</p>
+<pre><code>
+## PHP
+
+- ### Instalación de módulos PHP
+
+</code></pre>
+<p>sudo apt install php libapache2-mod-php php-msyql</p>
+<pre><code>
+## Otras herramientas relacionadas con la pila LAMP
+
+- ### Instalar phpMyAdmin para acceder vía web a MySQL
+
+#### Instalación de phpMyAdmin con apt
+
+</code></pre>
+<p>sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl</p>
+<pre><code>
+- ### Instalación de GoAccess
+
+Para instalar la ultima versión de GoAccess añadimos los repositorios oficiales del proyecto
+
+</code></pre>
+<p>echo "deb http://deb.goaccess.io/ $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/goaccess.list</p>
+<p>wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install goaccess
+```</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Principal" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Principal
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../docker-https/" class="md-footer__link md-footer__link--next" aria-label="Next: Practica-Docker-Https" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Practica-Docker-Https
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
