@@ -7,7 +7,7 @@
   - MySQL/MariaDB
   - PHP
 
-![portada](/imgs/portada.jpg)
+![portada](imgs/portada.jpg)
 ## Linux 
 
 Los siguientes comandos básicos son los utilizados en la práctica , es recomendable e incluso obligatorio utilzar sudo:
